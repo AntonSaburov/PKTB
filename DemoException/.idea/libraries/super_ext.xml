@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="super-ext">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../RemoteSystem/out/artifacts/super_ext/super-ext.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

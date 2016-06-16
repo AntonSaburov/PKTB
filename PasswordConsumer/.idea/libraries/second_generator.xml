@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="second-generator">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../PasswordSecondImpl/out/artifacts/second_generator/second-generator.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

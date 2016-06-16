@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="common-api">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../PasswordCommonApi/out/artifacts/common_api/common-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

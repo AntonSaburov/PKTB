@@ -1,6 +1,7 @@
 package edu.javacourse.sales.external;
 
 import edu.javacourse.sales.entity.SalesOrder;
+import edu.javacourse.sales.exception.SalesSystemException;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
 public class SalesSystemFake implements SalesSystem
 {
     @Override
-    public List<SalesOrder> getSalesOrders(Long managerId) {
+    public List<SalesOrder> getSalesOrders(Long managerId) throws SalesSystemException {
         return null;
     }
 }

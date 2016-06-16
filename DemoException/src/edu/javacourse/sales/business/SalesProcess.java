@@ -4,6 +4,7 @@ import edu.javacourse.sales.db.SalesDb;
 import edu.javacourse.sales.entity.SalesManager;
 import edu.javacourse.sales.entity.SalesOrder;
 import edu.javacourse.sales.entity.SalesRequest;
+import edu.javacourse.sales.exception.SalesSystemException;
 import edu.javacourse.sales.external.SalesSystem;
 
 import java.util.List;
@@ -29,7 +30,12 @@ public class SalesProcess
 
         for(SalesManager sm : result) {
             Long managerId = sm.getManagerId();
-            List<SalesOrder> orders = salesSys.getSalesOrders(managerId);
+            List<SalesOrder> orders = null;
+            try {
+                orders = salesSys.getSalesOrders(managerId);
+            } catch (SalesSystemException e) {
+                e.printStackTrace();
+            }
             sm.setSalesOrders(orders);
         }
 

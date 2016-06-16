@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="common-api">
+    <output-path>$PROJECT_DIR$/out/artifacts/common_api</output-path>
+    <root id="archive" name="common-api.jar">
+      <element id="module-output" name="PasswordCommonApi" />
+    </root>
+  </artifact>
+</component>

@@ -1,6 +1,7 @@
 package edu.javacourse.sales.external;
 
 import edu.javacourse.sales.entity.SalesOrder;
+import edu.javacourse.sales.exception.SalesSystemException;
 
 import java.util.List;
 
@@ -9,5 +10,5 @@ import java.util.List;
  */
 public interface SalesSystem
 {
-    List<SalesOrder> getSalesOrders(Long managerId);
+    List<SalesOrder> getSalesOrders(Long managerId) throws SalesSystemException;
 }

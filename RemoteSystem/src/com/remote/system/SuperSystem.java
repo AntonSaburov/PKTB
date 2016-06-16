@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class SuperSystem
 {
-    public List<RemoteOrder> getOrders(Long managerId) {
+    public List<RemoteOrder> getOrders(Long managerId) throws RemoteException {
         List<RemoteOrder> list = new ArrayList<>();
 
         list.add(new RemoteOrder(1L, "Order 1"));

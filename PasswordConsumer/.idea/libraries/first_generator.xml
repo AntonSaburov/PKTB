@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="first-generator">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../PasswordFirstImpl/out/artifacts/first_generator/first-generator.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

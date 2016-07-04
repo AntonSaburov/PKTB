@@ -108,3 +108,4 @@ local.properties
 # TeXlipse plugin
 .texlipse
 /NetBeansJar/nbproject/private/
+/WebFirst/nbproject/private/

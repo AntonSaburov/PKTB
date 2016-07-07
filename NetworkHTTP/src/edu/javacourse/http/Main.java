@@ -15,7 +15,7 @@ public class Main {
 
         // Открываем сокет для доступа к компьютеру
         // по адресу "internic.net" (порт 43)
-        Socket s = new Socket("lib.ru", 80);
+        Socket s = new Socket("127.0.0.1", 8080);
 
         // Открываем поток для записи в сокет (информация будет
         // посылаться от нас на удаленный компьютер
@@ -25,7 +25,7 @@ public class Main {
         OutputStream out = s.getOutputStream();
 
         // Готовим строчку с какими-то данными
-        String str = "GET /WEBMASTER/rfc2068/section-9.html HTTP/1.1\nhost:lib.ru\n\n";
+        String str = "GET /WebFirst/second HTTP/1.1\n\n";
         // Превращаем их в массив байт для передачи
         // Мы же используем поток, а он рабтает с байтами
         byte buf[] = str.getBytes();

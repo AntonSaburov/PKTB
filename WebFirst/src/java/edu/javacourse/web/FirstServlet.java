@@ -2,6 +2,7 @@ package edu.javacourse.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Serializable;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,7 +27,11 @@ public class FirstServlet extends HttpServlet
         //response.setCharacterEncoding("");
         //response.setContentType("text/html");
         //response.getOutputStream().write(b);
-        response.getWriter().append("<strong>Hello from Simple Servlet</strong>");
+//        response.getWriter().append("<strong>Hello from Simple Servlet</strong>");
+    
+        System.out.println("FIRST SERVLET IS CALLED");
+        getServletContext().getRequestDispatcher("/second").forward(request, response);
+
     }
 
     @Override

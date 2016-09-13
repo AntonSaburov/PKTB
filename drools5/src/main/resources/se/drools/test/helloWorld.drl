@@ -1,0 +1,49 @@
+package se.drools.test
+
+import se.test.Message;
+
+rule "CheckMessage1" dialect "mvel"
+  when
+      m : Message()
+  then
+      System.out.println("Rule 1");
+      m.printMessage();
+end
+
+
+rule "CheckMessage2" dialect "mvel"
+  when
+      m : Message(status == Message.GOOD_DAY)
+  then
+      System.out.println("Rule 2");
+      modify(m) {
+        message = "Goodby working day",
+        status = Message.GOOD_NIGHT
+      }
+end
+
+
+rule "CheckMessage3" dialect "mvel"
+  when
+      m : Message(status == Message.GOOD_NIGHT)
+  then
+      System.out.println("Rule 3");
+      Message m1 = new Message();
+      m1.status = Message.GOOD_MORNING;
+      insert (m1);
+end
+
+
+/*
+rule "CheckMessage2" dialect "mvel"
+//no-loop true
+  when
+      m : Message(status == Message.GOOD_DAY)
+  then
+      System.out.println("Rule 2");
+      modify(m) {
+        message = "Goodby working day",
+        status = Message.GOOD_DAY
+      }
+end
+*/

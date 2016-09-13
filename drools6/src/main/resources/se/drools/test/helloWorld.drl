@@ -1,0 +1,24 @@
+package se.drools.test
+
+import se.test.Message;
+
+global java.util.List messages;
+global se.test.SomeService service;
+
+
+rule "CheckMessage1" dialect "mvel"
+  when
+      m : Message()
+  then
+      System.out.println("Rule 1");
+      m.message = m.message + "_TEST";
+      messages.add(m);
+end
+
+rule "CheckMessage2" dialect "mvel"
+  when
+      m : Message()
+  then
+      System.out.println("Rule 2");
+      service.makeSomeThings(m);
+end

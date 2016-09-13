@@ -1,0 +1,7 @@
+package se.drools.test
+
+rule "Hello World1" dialect "mvel"
+  when
+  then
+      System.out.println("Hello World");
+end

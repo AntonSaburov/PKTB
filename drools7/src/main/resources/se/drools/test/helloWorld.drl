@@ -1,0 +1,40 @@
+package se.drools.test
+
+import se.test.Message;
+
+global java.util.Map rank;
+
+rule "Hello World1" dialect "mvel"
+agenda-group "calculation1"
+  when
+      m : Message();
+  then
+      System.out.println("Rule 1");
+end
+
+rule "Hello World2" dialect "mvel"
+agenda-group "calculation2"
+  when
+      m : Message();
+  then
+      System.out.println("Rule 2");
+      System.out.println(kcontext.rule.name);
+end
+
+/*
+rule "Hello World3" dialect "mvel"
+salience ( rank.get(kcontext.rule.name) )
+  when
+      m : Message();
+  then
+      System.out.println(kcontext.rule.name);
+end
+
+rule "Hello World4" dialect "mvel"
+salience ( rank.get(kcontext.rule.name) )
+  when
+      m : Message();
+  then
+      System.out.println(kcontext.rule.name);
+end
+*/

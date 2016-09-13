@@ -1,0 +1,28 @@
+package se.drools.test
+
+import se.test.Message;
+
+/*
+rule "CheckMessage1" dialect "mvel"
+  when
+      m : Message()
+  then
+      m.printMessage();
+end
+*/
+
+/*
+rule "CheckMessage2" dialect "mvel"
+  when
+      m : Message(status == Message.GOOD_MORNING)
+  then
+      m.printMessage();
+end
+*/
+
+rule "CheckMessage3" dialect "mvel"
+  when
+      m : Message(status == Message.GOOD_MORNING || status == Message.GOOD_DAY)
+  then
+      m.printMessage();
+end

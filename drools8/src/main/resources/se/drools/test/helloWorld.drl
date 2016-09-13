@@ -1,0 +1,18 @@
+package se.drools.test
+
+import se.test.Message;
+
+rule "Напечатай"
+when
+    Есть сообщение
+then
+    Напечатай
+end
+
+rule "Напечатай с условием"
+when
+    Есть сообщение со статусом "3"
+then
+    Напечатай все сообщение
+end
+

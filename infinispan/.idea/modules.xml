@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/infinispan-ear/infinispan-ear.iml" filepath="$PROJECT_DIR$/infinispan-ear/infinispan-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/infinispan-ejb/infinispan-ejb.iml" filepath="$PROJECT_DIR$/infinispan-ejb/infinispan-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/infinispan-test.iml" filepath="$PROJECT_DIR$/infinispan-test.iml" />
+    </modules>
+  </component>
+</project>
